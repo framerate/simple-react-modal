@@ -77,18 +77,14 @@ var Modal = (function (_React$Component) {
                 bottom: '0'
             };
 
-            var ReactCSSTransitionGroup = _reactAddons2['default'].addons.CSSTransitionGroup;
+            // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
             return _reactAddons2['default'].createElement(
                 'div',
                 { className: curtainClasses, style: this.props.curtainClass ? null : curtainStyle, onClick: this.props.clickHandler },
                 _reactAddons2['default'].createElement(
-                    ReactCSSTransitionGroup,
-                    { transitionName: this.props.transitionName },
-                    _reactAddons2['default'].createElement(
-                        'div',
-                        { key: '_srm-modal', style: this.props.modalClass ? null : modalStyle, className: modalClasses },
-                        this.props.children
-                    )
+                    'div',
+                    { key: '_srm-modal', style: this.props.modalClass ? null : modalStyle, className: modalClasses },
+                    this.props.children
                 )
             );
         }

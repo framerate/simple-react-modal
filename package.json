@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/framerate/simple-react-modal/issues"
   },
-  "homepage": "https://github.com/framerate/simple-react-modal#readme"
+  "homepage": "https://github.com/framerate/simple-react-modal#readme",
+  "devDependencies": {
+    "classnames": "^2.1.2",
+    "react": "^0.13.3"
+  }
 }

@@ -50,9 +50,13 @@ export default class Modal extends React.Component {
         }
 
 
-        let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+        // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
         return (
-            <div className={curtainClasses} style={this.props.curtainClass ? null : curtainStyle} onClick={this.props.clickHandler}><ReactCSSTransitionGroup transitionName={this.props.transitionName}><div key="_srm-modal" style={this.props.modalClass ? null : modalStyle} className={modalClasses}>{this.props.children}</div></ReactCSSTransitionGroup></div>
+            <div className={curtainClasses} style={this.props.curtainClass ? null : curtainStyle} onClick={this.props.clickHandler}>
+                <div key="_srm-modal" style={this.props.modalClass ? null : modalStyle} className={modalClasses}>
+                    {this.props.children}
+                </div>
+            </div>
         );
     }
 }
