@@ -1,0 +1,19 @@
+{
+  "name": "simple-react-modal",
+  "version": "0.1.0",
+  "description": "Reusable ReactJS Modal Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/framerate/simple-react-modal.git"
+  },
+  "author": "framerate@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/framerate/simple-react-modal/issues"
+  },
+  "homepage": "https://github.com/framerate/simple-react-modal#readme"
+}
