@@ -18,7 +18,7 @@ export default class Modal extends React.Component {
     }
 
     render() {
-        let classes = classNames('_srm-curtain', {'_srm-curtain-hidden': !this.props.visible});
+        let classes = classNames('_srm-curtain', {'_srm-curtain-hidden': !this.props.visible}, this.props.classNames ? this.props.classNames : null);
         let curtainStyle = {
             visibility: 'visible',
             position: 'fixed',
@@ -31,8 +31,8 @@ export default class Modal extends React.Component {
         };
 
         if (!this.props.visible) {
-            curtainStyle.visibility = hidden;
-            curtainStyle.display = none;
+            curtainStyle.visibility = 'hidden';
+            curtainStyle.display = 'none';
         }
 
         let modalStyle = {

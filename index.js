@@ -46,7 +46,7 @@ var Modal = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var classes = (0, _classnames2['default'])('_srm-curtain', { '_srm-curtain-hidden': !this.props.visible });
+            var classes = (0, _classnames2['default'])('_srm-curtain', { '_srm-curtain-hidden': !this.props.visible }, this.props.classNames ? this.props.classNames : null);
             var curtainStyle = {
                 visibility: 'visible',
                 position: 'fixed',
@@ -59,8 +59,8 @@ var Modal = (function (_React$Component) {
             };
 
             if (!this.props.visible) {
-                curtainStyle.visibility = hidden;
-                curtainStyle.display = none;
+                curtainStyle.visibility = 'hidden';
+                curtainStyle.display = 'none';
             }
 
             var modalStyle = {
