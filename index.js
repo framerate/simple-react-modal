@@ -63,7 +63,17 @@ var Modal = (function (_React$Component) {
                 curtainStyle.display = none;
             }
 
-            var modalStyle = {};
+            var modalStyle = {
+                borderRadius: '3px',
+                position: 'absolute',
+                width: '800px',
+                marginLeft: '-400px',
+                marginRight: '-400px',
+                top: '20%',
+                left: '50%',
+                right: '0',
+                bottom: '0'
+            };
             var ReactCSSTransitionGroup = _reactAddons2['default'].addons.CSSTransitionGroup;
             return _reactAddons2['default'].createElement(
                 'div',

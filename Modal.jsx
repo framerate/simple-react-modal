@@ -36,7 +36,15 @@ export default class Modal extends React.Component {
         }
 
         let modalStyle = {
-
+            borderRadius: '3px',
+            position: 'absolute',
+            width: '800px',
+            marginLeft: '-400px',
+            marginRight: '-400px',
+            top: '20%',
+            left: '50%',
+            right: '0',
+            bottom: '0'
         }
         let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
         return (
