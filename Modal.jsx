@@ -18,7 +18,8 @@ export default class Modal extends React.Component {
     }
 
     render() {
-        let classes = classNames('_srm-curtain', {'_srm-curtain-hidden': !this.props.visible}, this.props.classNames ? this.props.classNames : null);
+        let curtainClasses = classNames('_srm-curtain', {'_srm-curtain-hidden': !this.props.visible}, this.props.curtainClass ? this.props.curtainClass : null);
+        let modalClasses = classNames(this.props.modalClass ? this.props.modalClass : null);
 
         let curtainStyle = {
             visibility: 'visible',
@@ -51,9 +52,9 @@ export default class Modal extends React.Component {
 
         let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
         return (
-            <div className={classes} style={this.props.curtainClass ? null : curtainStyle} onClick={this.props.clickHandler}>
+            <div className={curtainClasses} style={this.props.curtainClass ? null : curtainStyle} onClick={this.props.clickHandler}>
                 <ReactCSSTransitionGroup transitionName={this.props.transitionName}>
-                    <div key="_srm-modal" style={this.props.modalClass ? null : modalStyle} className="_srm-modal">
+                    <div key="_srm-modal" style={this.props.modalClass ? null : modalStyle} className={modalClasses}>
                         {this.props.children}
                     </div>
                 </ReactCSSTransitionGroup>

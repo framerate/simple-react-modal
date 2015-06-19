@@ -46,7 +46,8 @@ var Modal = (function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var classes = (0, _classnames2['default'])('_srm-curtain', { '_srm-curtain-hidden': !this.props.visible }, this.props.classNames ? this.props.classNames : null);
+            var curtainClasses = (0, _classnames2['default'])('_srm-curtain', { '_srm-curtain-hidden': !this.props.visible }, this.props.curtainClass ? this.props.curtainClass : null);
+            var modalClasses = (0, _classnames2['default'])(this.props.modalClass ? this.props.modalClass : null);
 
             var curtainStyle = {
                 visibility: 'visible',
@@ -79,13 +80,13 @@ var Modal = (function (_React$Component) {
             var ReactCSSTransitionGroup = _reactAddons2['default'].addons.CSSTransitionGroup;
             return _reactAddons2['default'].createElement(
                 'div',
-                { className: classes, style: this.props.curtainClass ? null : curtainStyle, onClick: this.props.clickHandler },
+                { className: curtainClasses, style: this.props.curtainClass ? null : curtainStyle, onClick: this.props.clickHandler },
                 _reactAddons2['default'].createElement(
                     ReactCSSTransitionGroup,
                     { transitionName: this.props.transitionName },
                     _reactAddons2['default'].createElement(
                         'div',
-                        { key: '_srm-modal', style: this.props.modalClass ? null : modalStyle, className: '_srm-modal' },
+                        { key: '_srm-modal', style: this.props.modalClass ? null : modalStyle, className: modalClasses },
                         this.props.children
                     )
                 )
