@@ -40,9 +40,9 @@ export default class Modal extends React.Component {
         }
         let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
         return (
-            <div className={classes} onClick={this.props.clickHandler}>
+            <div className={classes} style={curtainStyle} onClick={this.props.clickHandler}>
                 <ReactCSSTransitionGroup transitionName={this.props.transitionName}>
-                    <div key="_srm-modal" className="_srm-modal">
+                    <div key="_srm-modal" style={modalStyle} className="_srm-modal">
                         {this.props.children}
                     </div>
                 </ReactCSSTransitionGroup>
