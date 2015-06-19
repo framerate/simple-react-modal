@@ -2,7 +2,7 @@
   "name": "simple-react-modal",
   "version": "0.1.0",
   "description": "Reusable ReactJS Modal Component",
-  "main": "index.js",
+  "main": "Modal.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
