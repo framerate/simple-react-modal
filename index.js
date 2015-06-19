@@ -47,16 +47,33 @@ var Modal = (function (_React$Component) {
         key: 'render',
         value: function render() {
             var classes = (0, _classnames2['default'])('_srm-curtain', { '_srm-curtain-hidden': !this.props.visible });
+            var curtainStyle = {
+                visibility: 'visible',
+                position: 'fixed',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                zIndex: '9999',
+                top: '0',
+                left: '0'
+            };
+
+            if (!this.props.visible) {
+                curtainStyle.visibility = hidden;
+                curtainStyle.display = none;
+            }
+
+            var modalStyle = {};
             var ReactCSSTransitionGroup = _reactAddons2['default'].addons.CSSTransitionGroup;
             return _reactAddons2['default'].createElement(
                 'div',
-                { className: classes, onClick: this.props.clickHandler },
+                { className: classes, style: curtainStyle, onClick: this.props.clickHandler },
                 _reactAddons2['default'].createElement(
                     ReactCSSTransitionGroup,
                     { transitionName: this.props.transitionName },
                     _reactAddons2['default'].createElement(
                         'div',
-                        { key: '_srm-modal', className: '_srm-modal' },
+                        { key: '_srm-modal', style: modalStyle, className: '_srm-modal' },
                         this.props.children
                     )
                 )
