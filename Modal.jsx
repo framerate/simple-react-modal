@@ -20,14 +20,14 @@ export default class Modal extends React.Component {
     render() {
         let classes = classNames('_srm-curtain', {'_srm-curtain-hidden': !this.props.visible});
         let curtainStyle = {
-            visibility: visible;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            backgroundColor: rgba(0, 0, 0, 0.9);
-            zIndex: 9999;
-            top: 0;
-            left: 0;
+            visibility: 'visible';
+            position: 'fixed';
+            width: '100%';
+            height: '100%';
+            backgroundColor: 'rgba(0, 0, 0, 0.9)';
+            zIndex: '9999';
+            top: '0';
+            left: '0';
         };
 
         if (!this.props.visible) {
