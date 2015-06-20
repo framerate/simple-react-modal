@@ -80,7 +80,10 @@ var Modal = (function (_React$Component) {
             var closeStyle = {
                 fontSize: '36px',
                 color: '#d1d1d1',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                position: 'absolute',
+                top: '15px',
+                right: '15px'
             };
 
             // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;

@@ -52,7 +52,10 @@ export default class Modal extends React.Component {
         let closeStyle = {
             fontSize: '36px',
             color: '#d1d1d1',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            position: 'absolute',
+            top: '15px',
+            right: '15px'
         }
 
 
