@@ -54,7 +54,7 @@ export default class Modal extends React.Component {
             color: '#d1d1d1',
             textTransform: 'uppercase',
             position: 'absolute',
-            top: '15px',
+            top: '5px',
             right: '15px'
         }
 
@@ -63,8 +63,8 @@ export default class Modal extends React.Component {
 
         // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
         return (
-            <div className={curtainClasses} style={this.props.curtainClass ? null : curtainStyle} onClick={this.props.clickHandler}>
-                <div className="_srm-close" style={closeStyle}>&times;</div>
+            <div className={curtainClasses} style={this.props.curtainClass ? null : curtainStyle}>
+                <div className="_srm-close" onClick={this.props.clickHandler} style={closeStyle}>&times;</div>
                 <div key="_srm-modal" style={this.props.modalClass ? null : modalStyle} className={modalClasses}>
                     {this.props.children}
                 </div>

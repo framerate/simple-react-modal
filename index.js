@@ -82,17 +82,17 @@ var Modal = (function (_React$Component) {
                 color: '#d1d1d1',
                 textTransform: 'uppercase',
                 position: 'absolute',
-                top: '15px',
+                top: '5px',
                 right: '15px'
             };
 
             // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
             return _reactAddons2['default'].createElement(
                 'div',
-                { className: curtainClasses, style: this.props.curtainClass ? null : curtainStyle, onClick: this.props.clickHandler },
+                { className: curtainClasses, style: this.props.curtainClass ? null : curtainStyle },
                 _reactAddons2['default'].createElement(
                     'div',
-                    { className: '_srm-close', style: closeStyle },
+                    { className: '_srm-close', onClick: this.props.clickHandler, style: closeStyle },
                     '×'
                 ),
                 _reactAddons2['default'].createElement(
