@@ -71,7 +71,7 @@ var Modal = (function (_React$Component) {
                 width: '800px',
                 marginLeft: '-400px',
                 marginRight: '-400px',
-                top: '20%',
+                top: '5%',
                 left: '50%',
                 right: '0',
                 bottom: '0'
@@ -92,12 +92,12 @@ var Modal = (function (_React$Component) {
                 { className: curtainClasses, style: this.props.curtainClass ? null : curtainStyle },
                 _reactAddons2['default'].createElement(
                     'div',
-                    { className: '_srm-close', onClick: this.props.clickHandler, style: closeStyle },
-                    '×'
-                ),
-                _reactAddons2['default'].createElement(
-                    'div',
                     { key: '_srm-modal', style: this.props.modalClass ? null : modalStyle, className: modalClasses },
+                    _reactAddons2['default'].createElement(
+                        'div',
+                        { className: '_srm-close', onClick: this.props.clickHandler, style: closeStyle },
+                        '×'
+                    ),
                     this.props.children
                 )
             );
