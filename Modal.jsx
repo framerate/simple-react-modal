@@ -55,7 +55,8 @@ export default class Modal extends React.Component {
             textTransform: 'uppercase',
             position: 'absolute',
             top: '5px',
-            right: '15px'
+            right: '15px',
+            display: this.props.hideClose ? 'none' : 'block'
         };
 
 

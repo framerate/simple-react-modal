@@ -83,7 +83,8 @@ var Modal = (function (_React$Component) {
                 textTransform: 'uppercase',
                 position: 'absolute',
                 top: '5px',
-                right: '15px'
+                right: '15px',
+                display: this.props.hideClose ? 'none' : 'block'
             };
 
             // let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
